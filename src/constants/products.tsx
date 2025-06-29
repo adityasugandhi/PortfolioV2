@@ -1,11 +1,12 @@
-import chatllama from "public/images/chatllama.png";
-import networksImg from "public/images/MaximaCliqueinUncertainNetworks.jpeg";
-import glacierTaxImg from "public/images/GlacierTaxHelper.avif";
-import catDogImg from "public/images/catvsdog.jpg";
-import algoTradingImg from "public/images/algorthmictrading.avif";
-import gulfofmexicoImg from "public/images/gulfofmexico.png";
-import llmImg from "public/images/llm.png";
-import ragImg from "public/images/rag.png";
+// Using string paths for better Next.js Image optimization
+const chatllama = "/images/chatllama.png";
+const networksImg = "/images/MaximaCliqueinUncertainNetworks.jpeg";
+const glacierTaxImg = "/images/GlacierTaxHelper.avif";
+const catDogImg = "/images/catvsdog.jpg";
+const algoTradingImg = "/images/algorthmictrading.avif";
+const gulfofmexicoImg = "/images/gulfofmexico.png";
+const llmImg = "/images/llm.png";
+const ragImg = "/images/rag.png";
 
 export const products = [
   {

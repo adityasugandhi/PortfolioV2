@@ -21,16 +21,16 @@ export const HeroSection = () => {
           Aditya
         </span>
       </h1>
-      <h3 className="text-2xl md:text-2xl lg:text-4xl font-semibold max-w-7xl mx-auto text-center mt-2 relative z-20 py-3 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
+      <h2 className="text-2xl md:text-2xl lg:text-4xl font-semibold max-w-7xl mx-auto text-center mt-2 relative z-20 py-3 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
         <Cover>Building</Cover> intelligent systems
-      </h3>
+      </h2>
       <p className="max-w-2xl mx-auto text-lg md:text-xl text-neutral-700 dark:text-neutral-400 text-center relative z-20 leading-relaxed">
-        I&apos;m a Software Engineer, Data Scientist, and Researcher with a passion for{" "}
-        <Highlight>crafting innovative solutions</Highlight> that aid humanity in reducing redundant work with the help of AI, ML, and software solutions.
+        I&apos;m an AI Engineer, Software Developer, and Data Scientist with a passion for{" "}
+        <Highlight>crafting innovative artificial intelligence solutions</Highlight> that aid humanity in reducing redundant work through machine learning and intelligent systems.
       </p>
       <p className="max-w-2xl mx-auto text-base md:text-lg text-neutral-600 dark:text-neutral-500 text-center relative z-20 mt-4 leading-relaxed">
         I have expertise in{" "}
-        <Highlight>finding insights from data</Highlight>, designing scalable software solutions, and creating personalized language models.
+        <Highlight>machine learning, data science, and full-stack development</Highlight>, designing scalable AI-powered software solutions and building intelligent systems.
       </p>
       <div className="mt-8 relative z-20">
         <HoverBorderGradient

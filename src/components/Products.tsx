@@ -54,13 +54,19 @@ export const Products = () => {
                 <div className="relative z-10 flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 w-full">
                   {/* Image section */}
                   <div className="flex justify-center md:justify-start w-full md:w-auto p-4">
-                    <Image
-                      src={product.thumbnail}
-                      alt="thumbnail"
-                      height="200"
-                      width="200"
-                      className="rounded-md w-full max-w-full md:w-[200px] md:max-w-[200px] h-auto object-cover"
-                    />
+                    <div className="relative w-full max-w-full md:w-[200px] md:max-w-[200px] h-[200px] rounded-md overflow-hidden bg-gray-100 dark:bg-gray-800">
+                      <Image
+                        src={product.thumbnail}
+                        alt={`${product.title} project thumbnail`}
+                        fill
+                        className="object-cover"
+                        priority={idx < 2}
+                        sizes="(max-width: 768px) 100vw, 200px"
+                        onError={(e) => {
+                          console.error(`Failed to load image for ${product.title}:`, e);
+                        }}
+                      />
+                    </div>
                   </div>
                   
                   {/* Content section */}
