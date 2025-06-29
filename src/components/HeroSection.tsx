@@ -16,7 +16,7 @@ export const HeroSection = () => {
     <section className="relative">
       <BackgroundLines className="flex items-center justify-center w-full flex-col px-4 h-screen">
         <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-4xl md:text-6xl lg:text-7xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight">
-        Hello there! I'm{" "}
+        Hello there! I&apos;m{" "}
         <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600">
           Aditya
         </span>
@@ -25,7 +25,7 @@ export const HeroSection = () => {
         <Cover>Building</Cover> intelligent systems
       </h3>
       <p className="max-w-2xl mx-auto text-lg md:text-xl text-neutral-700 dark:text-neutral-400 text-center relative z-20 leading-relaxed">
-        I'm a Software Engineer, Data Scientist, and Researcher with a passion for{" "}
+        I&apos;m a Software Engineer, Data Scientist, and Researcher with a passion for{" "}
         <Highlight>crafting innovative solutions</Highlight> that aid humanity in reducing redundant work with the help of AI, ML, and software solutions.
       </p>
       <p className="max-w-2xl mx-auto text-base md:text-lg text-neutral-600 dark:text-neutral-500 text-center relative z-20 mt-4 leading-relaxed">
@@ -41,7 +41,7 @@ export const HeroSection = () => {
           duration={2}
           clockwise={true}
         >
-          <span>What I've Worked On</span>
+          <span>What I&apos;ve Worked On</span>
           <svg 
             className="w-4 h-4 animate-bounce" 
             fill="none" 

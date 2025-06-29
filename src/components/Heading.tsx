@@ -18,7 +18,7 @@ export const Heading = ({
   className?: string;
   children: React.ReactNode;
   as?: keyof JSX.IntrinsicElements;
-} & React.HTMLAttributes<HTMLElement>) => {
+} & React.HTMLAttributes<any>) => {
   return (
     <Tag
       className={twMerge(
