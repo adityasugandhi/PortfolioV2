@@ -62,6 +62,7 @@ export const Products = () => {
                         className="object-cover"
                         priority={idx < 2}
                         sizes="(max-width: 768px) 100vw, 200px"
+                        unoptimized
                         onError={(e) => {
                           console.error(`Failed to load image for ${product.title}:`, e);
                         }}
