@@ -1,7 +1,8 @@
 import chatllama from "public/images/chatllama.png";
-import networksImg from "public/images/Networks.jpg";
-import earthImg from "public/images/earth.jpg";
-import maglabImg from "public/images/maglab_at_night.jpg";
+import networksImg from "public/images/MaximaCliqueinUncertainNetworks.jpeg";
+import glacierTaxImg from "public/images/GlacierTaxHelper.avif";
+import catDogImg from "public/images/catvsdog.jpg";
+import algoTradingImg from "public/images/algorthmictrading.avif";
 import gulfofmexicoImg from "public/images/gulfofmexico.png";
 import llmImg from "public/images/llm.png";
 import ragImg from "public/images/rag.png";
@@ -35,8 +36,8 @@ export const products = [
     title: "Glacier Tax Helper",
     description:
       "A comprehensive tax assistance tool designed to help users navigate complex tax calculations and filing requirements with intuitive interface and automated processing.",
-    thumbnail: maglabImg,
-    images: [maglabImg],
+    thumbnail: glacierTaxImg,
+    images: [glacierTaxImg],
     stack: ["Python", "Django", "Tax Processing", "Web Development"],
     slug: "glacier-tax-helper",
     content: (
@@ -59,8 +60,8 @@ export const products = [
     title: "Cat vs Dog Classification",
     description:
       "A machine learning project implementing computer vision techniques to classify images of cats and dogs using deep learning models with high accuracy.",
-    thumbnail: earthImg,
-    images: [earthImg],
+    thumbnail: catDogImg,
+    images: [catDogImg],
     stack: ["Python", "TensorFlow", "Computer Vision", "CNN"],
     slug: "cat-dog-classification",
     content: (
@@ -155,8 +156,8 @@ export const products = [
     title: "Algorithmic Trading",
     description:
       "Advanced trading algorithms implementing quantitative strategies, backtesting frameworks, and real-time market analysis for automated trading decisions.",
-    thumbnail: chatllama,
-    images: [chatllama],
+    thumbnail: algoTradingImg,
+    images: [algoTradingImg],
     stack: ["Python", "Pandas", "NumPy", "QuantLib", "Trading APIs"],
     slug: "algorithmic-trading",
     content: (
