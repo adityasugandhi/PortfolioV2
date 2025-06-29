@@ -200,6 +200,7 @@ const SidebarHeader = ({ collapsed, showText }: { collapsed: boolean; showText: 
         height="40"
         width="40"
         className="object-cover object-top rounded-full flex-shrink-0"
+        unoptimized
       />
       <AnimatePresence>
         {showText && (

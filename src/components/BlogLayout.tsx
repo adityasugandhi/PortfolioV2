@@ -59,6 +59,7 @@ export function BlogLayout({
               height="800"
               width="800"
               className={`object-cover object-left-top w-full max-h-96`}
+              unoptimized
             />
           </div>
         </header>
