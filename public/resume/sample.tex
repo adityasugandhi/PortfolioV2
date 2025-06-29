@@ -1,0 +1,125 @@
+% Author : Aditya Sugandhi – Tailored for Google Cloud & Distributed Systems
+% License : MIT
+\documentclass[letterpaper,10pt]{article}
+\usepackage{ragged2e,latexsym,enumitem,graphicx}
+\usepackage{titlesec,marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage[hidelinks,colorlinks=true,linkcolor=azureblue,urlcolor=azureblue,citecolor=azureblue]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx,fontawesome5,multicol}
+\usepackage{xcolor}
+\definecolor{metablue}{RGB}{24,119,242}
+\definecolor{darkgray}{HTML}{333333}
+\definecolor{azureblue}{RGB}{0,120,215}
+\usepackage[margin=0.225in]{geometry}
+\usepackage{CormorantGaramond,charter}
+\urlstyle{same}
+
+% Moderate list spacing
+\setlist[itemize]{topsep=2pt, parsep=2pt, itemsep=2pt, leftmargin=0.15in, label=\textbullet}
+
+% Section formatting
+\titleformat{\section}{\vspace{-4pt}\scshape\raggedright\large\bfseries}{}{0em}{}[\color{darkgray}\titlerule\vspace{4pt}]
+
+% Commands
+\newcommand{\resumeItem}[1]{\item\small#1}
+\newcommand{\resumeSubheading}[4]{%
+  \vspace{6pt}\noindent
+  \textbf{#1}\hfill{\footnotesize#2}\\[-1pt]
+  \noindent\small#3\hfill{\small#4}\vspace{3pt}
+}
+\newcommand{\resumeItemsStart}{\vspace{-2pt}\begin{itemize}}
+\newcommand{\resumeItemsEnd}{\end{itemize}\vspace{6pt}}
+
+\begin{document}
+
+%---------- HEADING ----------
+\begin{center}
+  {\huge \textbf{Aditya Sugandhi}} \\
+  +1 (448) 500 6857 ~|~ \color{metablue}{Tallahassee, FL} ~|~
+  \href{mailto:adityasugandhi.work@outlook.com}{adityasugandhi.work@outlook.com} ~|~
+  \href{https://github.com/adityasugandhi}{GitHub}
+  
+\end{center}
+\vspace{-12pt}
+
+%---------- SUMMARY ----------
+\section{\textcolor{metablue}{SUMMARY}}
+\small
+\vspace{-6pt}
+Software Engineer with \textbf{3+ years} of hands-on experience architecting \& optimizing \textbf{distributed, high-throughput systems} in production. Skilled in \textbf{C++}, \textbf{Python}, \& Go; adept in \textbf{performance tuning} (e.g., 30\% latency reduction), robust \textbf{monitoring/alerting} (Prometheus, Grafana), \& \textbf{infra automation} (Terraform, Kubernetes). Demonstrated leadership in on-call rotations, code reviews, \& cross-team design, ensuring \textbf{99.9\% uptime} \& scalable service delivery.
+\vspace{-5pt}
+
+%---------- TECHNICAL SKILLS ----------
+\section{\textcolor{metablue}{TECHNICAL SKILLS}}
+\vspace{-5pt}
+\small
+\begin{itemize}[label={}]
+  \item{\textbf{Languages:} C++, Python, Go, Bash, JavaScript/TypeScript, SQL}
+  \item{\textbf{Systems:} Linux (Ubuntu, RedHat), TCP/IP Networking, Shell Scripting}
+  \item{\textbf{Cloud & Infra:} Docker, Kubernetes, AWS, Terraform, Jenkins, GitHub Actions, CI/CD}
+  \item{\textbf{Observability:} Prometheus, Grafana, Alertmanager, tcpdump, strace}
+  \item{\textbf{Frameworks:} FastAPI, Spark, React, Next.js, PyTorch}
+  \item{\textbf{Databases:} PostgreSQL, MySQL, NoSQL, Query Optimization, Performance Tuning}
+\end{itemize}
+\vspace{-10pt}
+
+%---------- EXPERIENCE ----------
+\section{\textcolor{metablue}{WORK EXPERIENCE}}
+\small
+\vspace{-12pt}
+
+\resumeSubheading{BAS Software Developer}{Nov 2024 -- Present}{Florida State University}{Tallahassee, FL}
+\resumeItemsStart
+  \resumeItem{Engineered a \textbf{real-time WebSocket platform} handling \textbf{1,600+ concurrent connections} with \textbf{sub-second latency}, optimizing network I/O to reduce CPU usage by 20\%.}
+  \resumeItem{Implemented \& maintained \textbf{BACnet-TCP/IP integration} for building automation, diagnosing live network issues using \textit{tcpdump} \& \textit{strace}.}
+  \resumeItem{Built end-to-end \textbf{infra automation} with Terraform \& Helm charts, deploying containerized microservices on Kubernetes with autoscaling, reducing manual deployment time by 50\%.}
+  \resumeItem{Instrumented system health using Prometheus metrics \& Grafana dashboards; configured Alertmanager to triage incidents, cutting MTTD by 40\%.}
+  \resumeItem{Participated in 24/7 on-call rotation, triaging \& resolving production incidents with average MTTR of under 30 minutes.}
+\resumeItemsEnd
+\vspace{-5pt}
+\resumeSubheading{Machine Learning Researcher (Volunteer)}{Jan 2023 -- Aug 2024}{Prof. Olmo Zavala Romero | FSU}{Tallahassee, FL}
+\resumeItemsStart
+  \resumeItem{Architected \& deployed \textbf{Spark pipelines} for 1TB+ climate datasets on Kubernetes clusters, achieving 99\% job success \& improving throughput by 40\%.}
+  \resumeItem{Optimized distributed ingestion buffers \& memory management, reducing end-to-end pipeline runtime by 50\%.}
+  \resumeItem{Designed \& monitored job metrics in Grafana; created alerts to detect straggler tasks \& prevent SLA breaches.}
+\resumeItemsEnd
+\vspace{-5pt}
+\resumeSubheading{Software Analyst}{Oct 2020 -- Jul 2022}{Aspire Systems}{Chennai, India}
+\resumeItemsStart
+  \resumeItem{Migrated a legacy monolith to AWS microservices (EKS), improving availability by 99.5\% \& cutting infra costs by 20\%.}
+  \resumeItem{Developed optimized SQL stored procedures \& ETL pipelines, boosting data processing speed by 35\%.}
+  \resumeItem{Instituted unit/integration testing with Jest \& Cypress (90\% coverage), reducing regression defects by 50\%.}
+\resumeItemsEnd
+\vspace{-10pt}
+%---------- PROJECTS ----------
+\section{\textcolor{metablue}{PROJECTS}}
+\small
+\vspace{-5pt}
+\resumeItemsStart
+  \resumeItem{\textbf{Network Simulation System}: \href{https://github.com/adityasugandhi/Network-Simulation}{GitHub} – Simulated scalable chat-room protocols in C++, implementing custom routing algorithms that reduced average message hop count by 15\%.}
+  \resumeItem{\textbf{Algorithm Optimization}: \href{https://github.com/adityasugandhi/LearningC-}{GitHub} – Optimized graph-processing algorithms in C++ \& Python, achieving 45\% runtime improvements via parallelization \& memory pooling.}
+\resumeItemsEnd
+\vspace{-12pt}
+%---------- EDUCATION ----------
+\section{\textcolor{metablue}{EDUCATION}}
+\vspace{-10pt}
+\small
+
+\resumeSubheading{Florida State University}{Aug 2022 -- May 2024}{M.S. in Computer Science}{Tallahassee, FL}\\
+\textit{Relevant Coursework:} Data Communications, Advanced Database Systems, Cryptography, Data Mining
+
+\resumeSubheading{SRM Institute of Science \& Technology}{Aug 2016 -- May 2020}{B.Tech. in Computer Science}{Chennai, India}
+\vspace{-10pt}
+
+%---------- PUBLICATIONS & AWARDS ----------
+\section{\textcolor{metablue}{PUBLICATIONS & AWARDS}}
+\small
+\vspace{-5pt}
+\begin{itemize}
+  \item{Review Classification \& False Feedback Detection (IJAST)}
+  \item{2nd Place, SRM University Hackathon (2019)}
+  \item{AWS Solutions Architect Course (Udemy, 2024)}
+\end{itemize}
+
+\end{document}
