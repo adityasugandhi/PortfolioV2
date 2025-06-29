@@ -1,10 +1,32 @@
 "use client";
+import { useState, useEffect, useRef } from "react";
 import { BackgroundLines } from "@/components/ui/background-lines";
 import { Highlight } from "@/components/Highlight";
 import { Cover } from "@/components/ui/cover";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
+import { VinylRecord } from "@/components/VinylRecord";
+import { useMusicContext } from "@/context/MusicContext";
 
 export const HeroSection = () => {
+  const [isPageLoaded, setIsPageLoaded] = useState(false);
+  const { initializeMusic } = useMusicContext();
+
+  useEffect(() => {
+    // Check if page is fully loaded
+    if (document.readyState === 'complete') {
+      setIsPageLoaded(true);
+    } else {
+      const handleLoad = () => setIsPageLoaded(true);
+      window.addEventListener('load', handleLoad);
+      return () => window.removeEventListener('load', handleLoad);
+    }
+  }, []);
+
+  const handleVinylLoaded = () => {
+    // Initialize global music when vinyl animation is ready
+    initializeMusic();
+  };
+
   const handleScrollToProjects = () => {
     const element = document.getElementById("what-ive-worked-on");
     if (element) {
@@ -14,6 +36,11 @@ export const HeroSection = () => {
 
   return (
     <section className="relative">
+      {/* Vinyl Record Animation */}
+      {isPageLoaded && (
+        <VinylRecord onLoadComplete={handleVinylLoaded} />
+      )}
+      
       <BackgroundLines className="flex items-center justify-center w-full flex-col px-4 h-screen">
         <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-4xl md:text-6xl lg:text-7xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight">
         Hello there! I&apos;m{" "}

@@ -1,5 +1,4 @@
 import {
-  IconArticle,
   IconBolt,
   IconBriefcase2,
   IconMail,
@@ -27,11 +26,6 @@ export const navlinks = [
     href: "/experience",
     label: "Work Experience",
     icon: IconTimeline,
-  },
-  {
-    href: "/blog",
-    label: "Articles",
-    icon: IconArticle,
   },
   {
     href: "/contact",

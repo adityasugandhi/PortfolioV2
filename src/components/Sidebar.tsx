@@ -3,6 +3,7 @@ import { navlinks } from "@/constants/navlinks";
 import { Navlink } from "@/types/navlink";
 import Image from "next/image";
 import Link from "next/link";
+import { SmoothLink } from "./SmoothLink";
 import { useRouter, usePathname } from "next/navigation";
 import React, { useState, useEffect } from "react";
 import { twMerge } from "tailwind-merge";
@@ -109,7 +110,7 @@ export const Navigation = ({
   return (
     <div className="flex flex-col space-y-1 my-10 relative z-[100]">
       {navlinks.map((link: Navlink) => (
-        <Link
+        <SmoothLink
           key={link.href}
           href={link.href}
           onClick={() => isMobile() && setOpen(false)}
@@ -139,7 +140,7 @@ export const Navigation = ({
               </motion.span>
             )}
           </AnimatePresence>
-        </Link>
+        </SmoothLink>
       ))}
 
       {showText && (

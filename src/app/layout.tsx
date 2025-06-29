@@ -9,6 +9,8 @@ import { PortfolioFloatingDock } from "@/components/PortfolioFloatingDock";
 import { ClientLayout } from "@/components/ClientLayout";
 import { StructuredData } from "@/components/StructuredData";
 import { Analytics } from "@/components/Analytics";
+import { MusicProvider } from "@/context/MusicContext";
+import { GlobalSoundToggle } from "@/components/GlobalSoundToggle";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -104,16 +106,19 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <ClientLayout>
-            <Sidebar />
-            <div className="lg:pl-2 lg:pt-2 bg-gray-100 dark:bg-black flex-1 overflow-y-auto pb-20 lg:pb-0">
-              <div className="flex-1 bg-white dark:bg-black min-h-screen lg:rounded-tl-xl border border-transparent lg:border-neutral-200 dark:border-neutral-800 overflow-y-auto">
-                {children}
-                <Footer />
+          <MusicProvider>
+            <ClientLayout>
+              <Sidebar />
+              <div className="lg:pl-2 lg:pt-2 bg-gray-100 dark:bg-black flex-1 overflow-y-auto pb-20 lg:pb-0">
+                <div className="flex-1 bg-white dark:bg-black min-h-screen lg:rounded-tl-xl border border-transparent lg:border-neutral-200 dark:border-neutral-800 overflow-y-auto">
+                  {children}
+                  <Footer />
+                </div>
               </div>
-            </div>
-            <PortfolioFloatingDock />
-          </ClientLayout>
+              <PortfolioFloatingDock />
+              <GlobalSoundToggle />
+            </ClientLayout>
+          </MusicProvider>
         </ThemeProvider>
       </body>
     </html>
