@@ -34,7 +34,7 @@ export const Cover = ({
       );
       setBeamPositions(positions);
     }
-  }, [ref.current]);
+  }, []);
 
   // Auto-trigger animation after user has time to read the content
   useEffect(() => {

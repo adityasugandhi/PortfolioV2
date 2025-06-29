@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
   const images = [
-    "/About/aditya.JPG",
+    "/About/aditya.jpg",
     "/About/IMG_7073.jpg",
   ];
   
@@ -40,6 +40,8 @@ export default function About() {
                 height={400}
                 alt={`Aditya Sugandhi - ${index === 0 ? 'Personal Photo' : 'BMW Experience'}`}
                 className="rounded-md object-cover transform rotate-3 shadow-xl block w-full h-40 md:h-60 hover:rotate-0 transition duration-200"
+                unoptimized
+                priority
               />
             </motion.div>
           ))}

@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState, forwardRef, useImperativeHandle } from "react";
+import { useEffect, useRef, useState, forwardRef, useImperativeHandle, useCallback } from "react";
 
 interface BackgroundMusicProps {
   shouldPlay: boolean;
@@ -16,7 +16,7 @@ export const BackgroundMusic = forwardRef<BackgroundMusicRef, BackgroundMusicPro
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const toggleMusic = () => {
+  const toggleMusic = useCallback(() => {
     const audio = audioRef.current;
     if (!audio) return;
 
@@ -34,12 +34,12 @@ export const BackgroundMusic = forwardRef<BackgroundMusicRef, BackgroundMusicPro
           console.log("Audio play failed:", error);
         });
     }
-  };
+  }, [isPlaying, onToggle]);
 
   // Expose toggle function to parent component
   useImperativeHandle(ref, () => ({
     toggleMusic
-  }), [isPlaying]);
+  }), [toggleMusic]);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -63,7 +63,7 @@ export const BackgroundMusic = forwardRef<BackgroundMusicRef, BackgroundMusicPro
 
       return () => clearTimeout(timer);
     }
-  }, [shouldPlay, volume, isPlaying]);
+  }, [shouldPlay, volume, isPlaying, onToggle]);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -76,7 +76,7 @@ export const BackgroundMusic = forwardRef<BackgroundMusicRef, BackgroundMusicPro
 
     audio.addEventListener('ended', handleEnded);
     return () => audio.removeEventListener('ended', handleEnded);
-  }, []);
+  }, [onToggle]);
 
   return (
     <audio
