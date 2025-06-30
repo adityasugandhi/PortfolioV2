@@ -8,8 +8,6 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      {/* Gradient transition section */}
-      <div className="w-full h-32 bg-gradient-to-b from-black via-neutral-900 to-white dark:from-black dark:via-neutral-950 dark:to-black"></div>
       <Container>
         <Heading
           as="h3"

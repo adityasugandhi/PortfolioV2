@@ -1,4 +1,4 @@
-import { Sidebar } from "@/components/Sidebar";
+import { FloatingNav } from "@/components/FloatingNav";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -11,6 +11,7 @@ import { StructuredData } from "@/components/StructuredData";
 import { Analytics } from "@/components/Analytics";
 import { MusicProvider } from "@/context/MusicContext";
 import { GlobalSoundToggle } from "@/components/GlobalSoundToggle";
+import { ChatBot } from "@/components/ChatBot";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -97,7 +98,7 @@ export default function RootLayout({
       <body
         className={twMerge(
           inter.className,
-          "flex antialiased h-screen overflow-hidden bg-gray-100 dark:bg-black"
+          "antialiased bg-white dark:bg-black"
         )}
       >
         <ThemeProvider
@@ -108,15 +109,14 @@ export default function RootLayout({
         >
           <MusicProvider>
             <ClientLayout>
-              <Sidebar />
-              <div className="lg:pl-2 lg:pt-2 bg-gray-100 dark:bg-black flex-1 overflow-y-auto pb-20 lg:pb-0">
-                <div className="flex-1 bg-white dark:bg-black min-h-screen lg:rounded-tl-xl border border-transparent lg:border-neutral-200 dark:border-neutral-800 overflow-y-auto">
-                  {children}
-                  <Footer />
-                </div>
-              </div>
+              <FloatingNav />
+              <main className="min-h-screen">
+                {children}
+                <Footer />
+              </main>
               <PortfolioFloatingDock />
               <GlobalSoundToggle />
+              <ChatBot />
             </ClientLayout>
           </MusicProvider>
         </ThemeProvider>
