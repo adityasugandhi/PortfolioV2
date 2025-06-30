@@ -6,6 +6,7 @@ import { Cover } from "@/components/ui/cover";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { VinylRecord } from "@/components/VinylRecord";
 import { useMusicContext } from "@/context/MusicContext";
+import { ContainerTextFlip } from "@/components/ui/container-text-flip";
 
 export const HeroSection = () => {
   const [isPageLoaded, setIsPageLoaded] = useState(false);
@@ -51,10 +52,19 @@ export const HeroSection = () => {
       <h2 className="text-2xl md:text-2xl lg:text-4xl font-semibold max-w-7xl mx-auto text-center mt-2 relative z-20 py-3 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
         <Cover>Building</Cover> intelligent systems
       </h2>
-      <p className="max-w-2xl mx-auto text-lg md:text-xl text-neutral-700 dark:text-neutral-400 text-center relative z-20 leading-relaxed">
-        I&apos;m an AI Engineer, Software Developer, and Data Scientist with a passion for{" "}
-        <Highlight>crafting innovative artificial intelligence solutions</Highlight> that aid humanity in reducing redundant work through machine learning and intelligent systems.
-      </p>
+      <div className="max-w-4xl mx-auto text-center relative z-20 mt-6">
+        <p className="text-lg md:text-xl text-neutral-700 dark:text-neutral-400 leading-relaxed">
+          I&apos;m an{" "}
+          <ContainerTextFlip
+            words={["AI Engineer", "Software Developer", "Data Scientist", "ML Engineer"]}
+            interval={3000}
+            textClassName="text-lg md:text-xl font-semibold"
+            className="text-lg md:text-xl mx-1"
+          />
+          {" "}with a passion for{" "}
+          <Highlight>crafting innovative artificial intelligence solutions</Highlight> that aid humanity in reducing redundant work through machine learning and intelligent systems.
+        </p>
+      </div>
       <p className="max-w-2xl mx-auto text-base md:text-lg text-neutral-600 dark:text-neutral-500 text-center relative z-20 mt-4 leading-relaxed">
         I have expertise in{" "}
         <Highlight>machine learning, data science, and full-stack development</Highlight>, designing scalable AI-powered software solutions and building intelligent systems.
