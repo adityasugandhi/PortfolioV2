@@ -54,12 +54,12 @@ export const HeroSection = () => {
       </h2>
       <div className="max-w-4xl mx-auto text-center relative z-20 mt-6">
         <p className="text-lg md:text-xl text-neutral-700 dark:text-neutral-400 leading-relaxed">
-          I&apos;m an{" "}
+          I&apos;m an
           <ContainerTextFlip
-            words={["AI Engineer", "Software Developer", "Data Scientist", "ML Engineer"]}
+            words={["AI Engineer", "Software Engineer", "Machine Learning Engineer"]}
             interval={3000}
             textClassName="text-lg md:text-xl font-semibold"
-            className="text-lg md:text-xl mx-1"
+            className="text-lg md:text-xl"
           />
           {" "}with a passion for{" "}
           <Highlight>crafting innovative artificial intelligence solutions</Highlight> that aid humanity in reducing redundant work through machine learning and intelligent systems.

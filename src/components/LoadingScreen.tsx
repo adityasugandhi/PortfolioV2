@@ -30,16 +30,16 @@ export const LoadingScreen = ({ onLoadingComplete }: { onLoadingComplete: () => 
             duration: 0.5,
             ease: "easeInOut"
           }}
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black"
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-white dark:bg-black"
         >
           <div className="text-center">
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-4xl md:text-6xl font-bold text-white mb-4"
+              className="text-4xl md:text-6xl font-bold text-black dark:text-white mb-4"
             >
-              <Cover className="text-white" autoAnimate={true}>Building</Cover> at Warp Speed
+              <Cover className="text-black dark:text-white" autoAnimate={true}>Building</Cover> at Warp Speed
             </motion.h1>
             
             {/* Loading dots animation */}
@@ -61,7 +61,7 @@ export const LoadingScreen = ({ onLoadingComplete }: { onLoadingComplete: () => 
                     repeat: Infinity,
                     delay: index * 0.2,
                   }}
-                  className="w-3 h-3 bg-blue-500 rounded-full"
+                  className="w-3 h-3 bg-blue-500 dark:bg-blue-400 rounded-full"
                 />
               ))}
             </motion.div>

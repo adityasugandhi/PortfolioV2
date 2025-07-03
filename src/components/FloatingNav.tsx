@@ -7,6 +7,7 @@ import { SmoothLink } from "./SmoothLink";
 import { usePathname } from "next/navigation";
 import { twMerge } from "tailwind-merge";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { SoundToggle } from "@/components/SoundToggle";
 
 export const FloatingNav = () => {
   const [visible, setVisible] = useState(true);
@@ -66,6 +67,7 @@ export const FloatingNav = () => {
             <div className="w-px h-6 bg-neutral-300 dark:bg-neutral-600 mx-2" />
             
             <ThemeToggle />
+            <SoundToggle />
           </div>
         </motion.div>
       )}

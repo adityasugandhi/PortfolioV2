@@ -4,11 +4,13 @@ import React, { useState, useEffect } from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import { navlinks } from "@/constants/navlinks";
 import { socials } from "@/constants/socials";
-import { IconSun, IconMoon } from "@tabler/icons-react";
+import { IconSun, IconMoon, IconVolume, IconVolumeOff } from "@tabler/icons-react";
 import { useTheme } from "next-themes";
+import { useMusicContext } from "@/context/MusicContext";
 
 export function PortfolioFloatingDock() {
   const { theme, setTheme } = useTheme();
+  const { isPlaying, toggleMusic } = useMusicContext();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -45,6 +47,18 @@ export function PortfolioFloatingDock() {
       ),
       href: "#",
       onClick: handleThemeToggle,
+    },
+    
+    // Sound toggle as a dock item
+    {
+      title: isPlaying ? "Mute Music" : "Play Music",
+      icon: isPlaying ? (
+        <IconVolume className="h-full w-full text-blue-500 dark:text-blue-400" />
+      ) : (
+        <IconVolumeOff className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#",
+      onClick: toggleMusic,
     },
     
     // Social links (limited to key ones for mobile)

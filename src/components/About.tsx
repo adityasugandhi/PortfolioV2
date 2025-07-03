@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
   const images = [
-    "/About/aditya.jpg",
+    "/images/about.webp",
     "/About/IMG_7073.jpg",
   ];
   

@@ -73,48 +73,50 @@ export function ContainerTextFlip({
   }, [words, interval]);
 
   return (
-    <motion.div
+    <span 
       className={cn(
-        "relative inline-block text-center font-bold text-neutral-900 dark:text-white bg-transparent overflow-hidden",
+        "relative inline-block font-bold text-neutral-900 dark:text-white bg-transparent align-baseline",
         className,
       )}
-      style={{ width: maxWidth > 0 ? `${maxWidth}px` : 'auto' }}
+      style={{ width: maxWidth > 0 ? `${maxWidth}px` : 'auto', display: 'inline-block', verticalAlign: 'text-bottom' }}
     >
       <AnimatePresence mode="wait">
-        <motion.div
+        <motion.span
           key={words[currentWordIndex]}
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 5 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
+          exit={{ opacity: 0, y: -5 }}
           transition={{
             duration: animationDuration / 1000,
             ease: "easeInOut",
           }}
-          className={cn("inline-block w-full text-center", textClassName)}
+          className={cn("inline-block", textClassName)}
           ref={measureRef}
+          style={{ verticalAlign: 'text-bottom' }}
         >
-        <motion.div className="inline-block">
-          {words[currentWordIndex].split("").map((letter, index) => (
-            <motion.span
-              key={index}
-              initial={{
-                opacity: 0,
-                filter: "blur(10px)",
-              }}
-              animate={{
-                opacity: 1,
-                filter: "blur(0px)",
-              }}
-              transition={{
-                delay: index * 0.02,
-              }}
-            >
-              {letter}
-            </motion.span>
-          ))}
-        </motion.div>
-        </motion.div>
+          <span className="inline-block">
+            {words[currentWordIndex].split("").map((letter, index) => (
+              <motion.span
+                key={index}
+                initial={{
+                  opacity: 0,
+                  filter: "blur(10px)",
+                }}
+                animate={{
+                  opacity: 1,
+                  filter: "blur(0px)",
+                }}
+                transition={{
+                  delay: index * 0.02,
+                }}
+                style={{ display: 'inline-block' }}
+              >
+                {letter}
+              </motion.span>
+            ))}
+          </span>
+        </motion.span>
       </AnimatePresence>
-    </motion.div>
+    </span>
   );
 }

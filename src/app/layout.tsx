@@ -10,7 +10,6 @@ import { ClientLayout } from "@/components/ClientLayout";
 import { StructuredData } from "@/components/StructuredData";
 import { Analytics } from "@/components/Analytics";
 import { MusicProvider } from "@/context/MusicContext";
-import { GlobalSoundToggle } from "@/components/GlobalSoundToggle";
 import { ChatBot } from "@/components/ChatBot";
 
 const inter = Inter({
@@ -115,7 +114,6 @@ export default function RootLayout({
                 <Footer />
               </main>
               <PortfolioFloatingDock />
-              <GlobalSoundToggle />
               <ChatBot />
             </ClientLayout>
           </MusicProvider>
